@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   get '/about', to: 'about#about'
 
-  resources :articles, only: [:show]
+  resources :articles, only: [:show, :index]
 end
