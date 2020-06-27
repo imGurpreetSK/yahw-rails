@@ -10,9 +10,7 @@
   </head>
 
   <body>
-    <% flash.each do |name, flash_message| %>
-      <%= flash_message %>
-    <% end %>
+    <%= render 'layouts/messages' %> <!-- Won't work is `layouts/` isn't added. -->
 
     <%= yield %>
   </body>

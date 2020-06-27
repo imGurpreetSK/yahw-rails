@@ -1,29 +1,5 @@
 <h1>Create A New Article</h1>
 
-<% if @article.errors.any? %>
-  <h3>The following errors occurred:</h3>
-  <ul>
-    <% @article.errors.full_messages.each do |error| %>
-      <li>
-        <%= error %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-
-<%= form_with scope: :article, url: articles_path, local: true do |form| %>
-
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
-
-  <p>
-    <%= form.label :description %><br>
-    <%= form.text_area :description %>
-  </p>
-
-  <%= form.submit %>
-<% end %>
+<%= render 'articles/form' %>
 
 <%= link_to 'Back', articles_path %>
