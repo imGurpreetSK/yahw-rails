@@ -13,7 +13,10 @@
 
   <body class="d-flex flex-column">
     <%= render 'layouts/navbar' %> <!-- Won't work if `layouts/` isn't added. -->
-    <%= render 'layouts/messages' %> <!-- Won't work if `layouts/` isn't added. -->
-    <%= yield %>
+    <div id="page-content">
+      <%= render 'layouts/messages' %> <!-- Won't work if `layouts/` isn't added. -->
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %> <!-- Won't work if `layouts/` isn't added. -->
   </body>
 </html>
