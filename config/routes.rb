@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'root#root'
 
   get '/about', to: 'about#about'
+  get '/signup', to: 'users#new'
 
   resources :articles
+  resource :users, except: %i[new]
 end
