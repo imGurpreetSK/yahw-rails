@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
 
   resources :articles
-  resource :users, except: %i[new]
+  resources :users, except: %i[new]
 end
