@@ -2,6 +2,10 @@ class UsersController < ApplicationController
 
   before_action :set_user, only: %i[edit update]
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def new
     @user = User.new
   end
