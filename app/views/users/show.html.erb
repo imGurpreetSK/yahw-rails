@@ -6,3 +6,7 @@
 
 <h4 class="text-center mt-4">Articles</h4>
 <%= render 'articles/articles' %>
+
+<div class="flickr_pagination mb-4">
+  <%= will_paginate @articles, :container => false %>
+</div>
