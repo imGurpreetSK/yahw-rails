@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   get '/about', to: 'about#about'
   get '/signup', to: 'users#new'
+  get '/login', to: 'login#new'
+  post '/login', to: 'login#create'
+  delete '/login', to: 'login#destroy'
 
   resources :articles
   resources :users, except: %i[new]
