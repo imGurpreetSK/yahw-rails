@@ -1,3 +1,3 @@
 # YAHW
 
-Yet Another Hello World.
+Yet Another Hello World (Ruby on Rails).
